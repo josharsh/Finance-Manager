@@ -1,6 +1,14 @@
 # Finance-Manager
-Finance Manager is an Android Application which contains Income Tax Calculator and EMI Calculator. 
-     <p>
+Finance Manager is an Android Application which contains Income Tax Calculator and EMI Calculator.
+
+# Technologies/Platform
+* Android Studio
+* Java
+* XML
+* Gradle
+
+# Screenshots 
+  <p>
 <img src="RepoResources/1.jpeg"
      alt="Finance Manager Application"
      height=420 width=190/>
@@ -21,6 +29,4 @@ Finance Manager is an Android Application which contains Income Tax Calculator a
   <img src="RepoResources/7.jpeg"
      alt="Finance Manager Application"
       height=420 width=190/> 
-       <img src="RepoResources/8.jpeg"
-     alt="Finance Manager Application"
-      height=420 width=190/> 
+  
