@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);// To Display The Layout from activy_main resource layout file. 
         setContentView(R.layout.activity_main);
         t=(TextView)findViewById(R.id.textView4);
         t.setText("By: Harsh Joshi CSE-OSS B1 R.No: 30");
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(MainActivity.this, com.cmt.taxcalculator.IncomeActivity.class);
-                startActivity(intent);
+                startActivity(intent); // On clicking on the button, Income Tax Calculator activity is called
             }
         });
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, com.cmt.taxcalculator.EMIActivity.class);
-                startActivity(intent);
+                startActivity(intent);// On clicking on the button, EMI activity is called
             }
         });
     }
