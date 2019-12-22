@@ -17,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);// To Display The Layout from activy_main resource layout file. 
         setContentView(R.layout.activity_main);
-        t=(TextView)findViewById(R.id.textView4);
-        t.setText("By: Harsh Joshi CSE-OSS B1 R.No: 30");
         b1 = findViewById(R.id.button1);
         b2 = findViewById(R.id.button2);
 
@@ -38,4 +36,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void exitApp() {
+        finish();
+    }
+
 }
