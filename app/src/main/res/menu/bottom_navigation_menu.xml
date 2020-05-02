@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_information"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="Info" />
+
+    <item
+        android:id="@+id/navigation_developer"
+        android:icon="@drawable/ic_monetization_on_black_24dp"
+        android:title="Developer" />
+
+</menu>
