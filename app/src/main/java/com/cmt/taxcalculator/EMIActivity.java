@@ -102,7 +102,7 @@ public class EMIActivity extends AppCompatActivity {
 
     public  float calDvdnt(float Rate, float Months) {
 
-        return (float) (Math.pow(1+Rate, Months));
+        return (float) ((1+Rate)* Months);
 
     }
 
