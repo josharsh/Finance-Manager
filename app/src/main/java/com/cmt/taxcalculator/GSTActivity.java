@@ -1,15 +1,19 @@
 package com.cmt.taxcalculator;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.cmt.taxcalculator.databinding.ActivityEmiBinding;
 
 public class GSTActivity extends AppCompatActivity {
+private ActivityEmiBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emi);
+       binding=ActivityEmiBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
     }
 }

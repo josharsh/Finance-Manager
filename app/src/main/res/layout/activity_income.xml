@@ -170,7 +170,7 @@
         android:layout_marginTop="18dp"
         android:layout_marginEnd="28dp"
         android:ems="10"
-        android:inputType="number|numberDecimal"
+        android:inputType="numberDecimal"
         android:labelFor="@id/edit1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

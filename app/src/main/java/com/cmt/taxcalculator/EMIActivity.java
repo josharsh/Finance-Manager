@@ -1,30 +1,35 @@
 package com.cmt.taxcalculator;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.cmt.taxcalculator.databinding.ActivityEmiBinding;
+
 
 public class EMIActivity extends AppCompatActivity {
 
     Button emiCalcBtn;
+    private ActivityEmiBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emi);
+        binding = ActivityEmiBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        final EditText P = findViewById(R.id.principal);
-        final EditText I = findViewById(R.id.interest);
-        final EditText Y = findViewById(R.id.years);
-        final EditText TI = findViewById(R.id.interest_total);
-        final EditText result = findViewById(R.id.emi) ;
+        final EditText P = binding.principal;
+        final EditText I = binding.interest;
+        final EditText Y = binding.years;
+        final EditText TI = binding.interestTotal;
+        final EditText result = binding.emi;
 
 
-        emiCalcBtn = findViewById(R.id.btn_calculate2);
+        emiCalcBtn = binding.btnCalculate2;
 
         emiCalcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,15 +67,15 @@ public class EMIActivity extends AppCompatActivity {
 
                 float Months = calMonth(y);
 
-                float Dvdnt = calDvdnt( Rate, Months);
+                float Dvdnt = calDvdnt(Rate, Months);
 
-                float FD = calFinalDvdnt (Principal, Rate, Dvdnt);
+                float FD = calFinalDvdnt(Principal, Rate, Dvdnt);
 
                 float D = calDivider(Dvdnt);
 
                 float emi = calEmi(FD, D);
 
-                float TA = calTa (emi, Months);
+                float TA = calTa(emi, Months);
 
                 float ti = calTotalInt(TA, Principal);
 
@@ -82,57 +87,57 @@ public class EMIActivity extends AppCompatActivity {
         });
     }
 
-    public  float calPric(float p) {
+    public float calPric(float p) {
 
         return (p);
 
     }
 
-    public  float calInt(float i) {
+    public float calInt(float i) {
 
-        return (i/12/100);
+        return (i / 12 / 100);
 
     }
 
-    public  float calMonth(float y) {
+    public float calMonth(float y) {
 
         return (y * 12);
 
     }
 
-    public  float calDvdnt(float Rate, float Months) {
+    public float calDvdnt(float Rate, float Months) {
 
-        return (float) ((1+Rate)* Months);
+        return (float) ((1 + Rate) * Months);
 
     }
 
-    public  float calFinalDvdnt(float Principal, float Rate, float Dvdnt) {
+    public float calFinalDvdnt(float Principal, float Rate, float Dvdnt) {
 
         return (Principal * Rate * Dvdnt);
 
     }
 
-    public  float calDivider(float Dvdnt) {
+    public float calDivider(float Dvdnt) {
 
-        return (Dvdnt-1);
-
-    }
-
-    public  float calEmi(float FD, Float D) {
-
-        return (FD/D);
+        return (Dvdnt - 1);
 
     }
 
-    public  float calTa(float emi, Float Months) {
+    public float calEmi(float FD, Float D) {
 
-        return (emi*Months);
+        return (FD / D);
 
     }
 
-    public  float calTotalInt(float TA, float Principal) {
+    public float calTa(float emi, Float Months) {
 
-        return (TA - Principal);
+        return (emi * Months);
+
+    }
+
+    public float calTotalInt(float TA, float Principal) {
+
+        return (Math.abs(TA - Principal));
 
     }
 }

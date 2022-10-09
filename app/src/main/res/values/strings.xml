@@ -7,4 +7,10 @@
     <string name="enterincome"> Enter Income</string>
     <string name="hint_interest_total">Total Interest for Loan ₹</string>
     <string name="ab">By: Harsh Joshi</string>
+    <string name="calculate">Calculate</string>
+    <string name="section_80d">Section 80D</string>
+    <string name="section_80tta">Section 80TTA</string>
+    <string name="section_80c">Section 80C</string>
+    <string name="income_tax_calculator">INCOME TAX CALCULATOR</string>
+    <string name="lta">LTA</string>
 </resources>
