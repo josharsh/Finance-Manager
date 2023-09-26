@@ -130,9 +130,8 @@ public class EMIActivity extends AppCompatActivity {
 
     }
 
-    public  float calTotalInt(float TA, float Principal) {
-
-        return (TA - Principal);
-
-    }
+public String calTotalIntFormatted(float TA, float Principal) {
+    float totalInterest = TA - Principal;
+    return String.format("%.2f", totalInterest);
+}
 }
